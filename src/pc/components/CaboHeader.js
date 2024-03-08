@@ -116,7 +116,7 @@ const CaboHeader = ({ isFixed = false, color = '#353535', opacity = '1' }) => {
                 color={color}
                 onClick={() => {
                   saveLog('헤더 서비스 이동 클릭')
-                  navigate('/')
+                  window.open('https://cabo.kr/serviceHome/', '_blank');
                   window.scrollTo(0, 0)
                 }}
               >

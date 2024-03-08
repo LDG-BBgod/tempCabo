@@ -75,7 +75,7 @@ const Home = () => {
             <CaboButton
               buttonFunc={() => {
                 saveLog('홈 섹션1 서비스버튼 클릭')
-                // navigate('/pc/bussiness')실제 페이지로 이동
+                window.open('https://cabo.kr/serviceHome/', '_blank');
               }}
               width={236}
               height={48}
@@ -197,7 +197,7 @@ const Home = () => {
             <CaboButton
               buttonFunc={() => {
                 saveLog('홈 섹션2 다이렉트 카보 확인 클릭')
-                // navigate('/pc/bussiness')실제 페이지로 이동
+                window.open('https://cabo.kr/serviceHome/', '_blank');
               }}
               width={236}
               height={48}

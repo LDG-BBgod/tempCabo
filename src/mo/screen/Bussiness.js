@@ -180,7 +180,7 @@ const Bussiness = () => {
             <CaboButton
               buttonFunc={() => {
                 saveLog('헤더 사업소개 클릭')
-                // navigate('/mo/bussiness')
+                window.open('https://cabo.kr/serviceHome/', '_blank')
               }}
               width={250}
               height={60}
