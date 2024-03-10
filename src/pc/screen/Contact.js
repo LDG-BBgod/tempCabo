@@ -53,11 +53,11 @@ const Contact = () => {
               </CaboText>
               <CaboSpacer space={30} />
               <CaboText fontSize={28} fontWeight="600" color="#16223B">
-                업무 협약, 중개계약, 서비스 문의,
+                업무 협약, 중개계약, 서비스 문의 등을
               </CaboText>
               <CaboSpacer space={20} />
               <CaboText fontSize={28} fontWeight="600" color="#16223B">
-                기타 문의 등 카보는 가치를 공유합니다.
+                남겨주세요. 확인후 답변드립니다.
               </CaboText>
             </div>
             <div
@@ -177,7 +177,6 @@ const Contact = () => {
                 })
                 alert('문의가 제출되었습니다. 감사합니다.')
                 window.location.reload()
-
               }}
               width={300}
               height={70}

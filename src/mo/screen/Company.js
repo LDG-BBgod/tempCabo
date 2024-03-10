@@ -31,8 +31,11 @@ const Company = () => {
   const [selectedList, setSelectedList] = useState('vision')
 
   const List = ({ text, id }) => {
+    const [isHovered, setIsHovered] = useState(false)
     return (
       <div
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -46,7 +49,14 @@ const Company = () => {
           navigate(id)
         }}
       >
-        <CaboText fontSize={20} color={selectedList === id ? '#fff' : '#000'}>
+        <CaboText
+          fontSize={20}
+          fontWeight={isHovered ? '700' : '400'}
+          color={selectedList === id ? '#fff' : '#000'}
+          style={{
+            transition: '0.2s',
+          }}
+        >
           {text}
         </CaboText>
       </div>

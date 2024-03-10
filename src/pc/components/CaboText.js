@@ -1,4 +1,5 @@
 const CaboText = ({
+  onClick = null,
   children = '',
   color = '#000',
   fontSize = 16,
@@ -10,6 +11,7 @@ const CaboText = ({
     : 'Inter'
   return (
     <div
+      onClick={onClick}
       style={{
         fontFamily: fontFamily,
         fontSize,

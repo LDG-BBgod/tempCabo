@@ -1,5 +1,5 @@
 // 라이브러리
-
+import { useNavigate } from 'react-router-dom'
 // 리덕스
 
 // 컴포넌트
@@ -15,6 +15,7 @@ import { saveLog } from '../../api'
 // 기타
 
 const Home = () => {
+  const navigate = useNavigate()
   return (
     <>
       <CaboHeader isFixed={true} />
@@ -75,7 +76,7 @@ const Home = () => {
             <CaboButton
               buttonFunc={() => {
                 saveLog('홈 섹션1 서비스버튼 클릭')
-                window.open('https://cabo.kr/serviceHome/', '_blank');
+                window.open('https://cabo.kr/serviceHome/', '_blank')
               }}
               width={236}
               height={48}
@@ -197,11 +198,11 @@ const Home = () => {
             <CaboButton
               buttonFunc={() => {
                 saveLog('홈 섹션2 다이렉트 카보 확인 클릭')
-                window.open('https://cabo.kr/serviceHome/', '_blank');
+                window.open('https://cabo.kr/serviceHome/', '_blank')
               }}
               width={236}
               height={48}
-              fontSize={20}
+              fontSize={18}
             >
               다이렉트 카보 확인하기
             </CaboButton>
@@ -317,27 +318,163 @@ const Home = () => {
         />
         <div style={{ paddingTop: 120 }}>
           <CaboInner>
-            <CaboText fontSize={40} fontWeight="500" color="#fff">
+            <CaboText fontSize={40} fontWeight="600" color="#fff">
               공시 / 채용
             </CaboText>
             <CaboSpacer space={40} />
             <div style={{ display: 'flex', justifyContent: 'space-between' }}>
               <div
                 style={{
+                  boxSizing: 'border-box',
                   width: 530,
                   height: 230,
                   backgroundColor: 'rgba(41,41,41,0.7)',
                   borderRadius: 20,
+                  padding: '30px 40px',
                 }}
-              ></div>
+              >
+                <div
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <div
+                    style={{
+                      width: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                    }}
+                  >
+                    <CaboText fontSize={24} fontWeight="500" color="#fff">
+                      공시
+                    </CaboText>
+                    <CaboText
+                      fontSize={35}
+                      fontWeight="500"
+                      color="#fff"
+                      style={{ cursor: 'pointer' }}
+                      onClick={() => {
+                        navigate('company/alarmBoard')
+                        window.scrollTo(0, 0)
+                      }}
+                    >
+                      +
+                    </CaboText>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      gap: 30,
+                    }}
+                  >
+                    <CaboText
+                      onClick={() => {
+                        navigate('company/alarmBoard')
+                        window.scrollTo(0, 0)
+                      }}
+                      fontSize={20}
+                      fontWeight="400"
+                      color="#B4B4B4"
+                      style={{
+                        cursor: 'pointer',
+                        paddingBottom: 8,
+                        borderBottom: 'solid 4px #B4B4B4',
+                      }}
+                    >
+                      전자공시
+                    </CaboText>
+                    <CaboText
+                      onClick={() => {
+                        navigate('company/alarmBoard')
+                        window.scrollTo(0, 0)
+                      }}
+                      fontSize={20}
+                      fontWeight="400"
+                      color="#B4B4B4"
+                      style={{
+                        cursor: 'pointer',
+                        paddingBottom: 8,
+                        borderBottom: 'solid 4px #B4B4B4',
+                      }}
+                    >
+                      보험중개사 공시
+                    </CaboText>
+                  </div>
+                </div>
+              </div>
               <div
                 style={{
+                  boxSizing: 'border-box',
                   width: 530,
                   height: 230,
                   backgroundColor: 'rgba(41,41,41,0.7)',
                   borderRadius: 20,
+                  padding: '30px 40px',
                 }}
-              ></div>
+              >
+                <div
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    display: 'flex',
+                    flexDirection: 'column',
+                    justifyContent: 'space-between',
+                  }}
+                >
+                  <div
+                    style={{
+                      width: '100%',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                    }}
+                  >
+                    <CaboText fontSize={24} fontWeight="500" color="#fff">
+                      채용
+                    </CaboText>
+                    <CaboText
+                      onClick={() => {
+                        navigate('company/employ')
+                        window.scrollTo(0, 0)
+                      }}
+                      fontSize={35}
+                      fontWeight="500"
+                      color="#fff"
+                      style={{ cursor: 'pointer' }}
+                    >
+                      +
+                    </CaboText>
+                  </div>
+                  <div
+                    style={{
+                      display: 'flex',
+                      gap: 20,
+                    }}
+                  >
+                    <CaboText
+                      onClick={() => {
+                        navigate('company/employ')
+                        window.scrollTo(0, 0)
+                      }}
+                      fontSize={20}
+                      fontWeight="400"
+                      color="#B4B4B4"
+                      style={{
+                        cursor: 'pointer',
+                        paddingBottom: 8,
+                        borderBottom: 'solid 4px #B4B4B4',
+                      }}
+                    >
+                      채용공고
+                    </CaboText>
+                  </div>
+                </div>
+              </div>
             </div>
           </CaboInner>
         </div>

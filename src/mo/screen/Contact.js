@@ -57,11 +57,11 @@ const Contact = () => {
               </CaboText>
               <CaboSpacer space={15} />
               <CaboText fontSize={20} fontWeight="600" color="#16223B">
-                서비스 문의, 기타 문의 등
+                서비스 문의 등을 남겨주세요.
               </CaboText>
               <CaboSpacer space={15} />
               <CaboText fontSize={20} fontWeight="600" color="#16223B">
-                카보는 가치를 공유합니다.
+                확인후 답변드립니다.
               </CaboText>
             </div>
             <CaboSpacer space={50} />

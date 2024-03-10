@@ -35,8 +35,8 @@ const CaboHeader = ({ isFixed = true, color = '#353535', opacity = '1' }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const containerStyle = {
-    width: '30px',
-    height: '30px',
+    width: '25px',
+    height: '25px',
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-around',
@@ -45,15 +45,15 @@ const CaboHeader = ({ isFixed = true, color = '#353535', opacity = '1' }) => {
 
   const commonBarStyle = {
     width: '100%',
-    height: 4,
+    height: 3,
     backgroundColor: isOpen || !isTop ? '#353535' : color,
-    borderRadius: 2,
+    borderRadius: 1.5,
     transition: 'all 0.2s ease',
     transformOrigin: 'center',
   }
 
   const bar1Style = {
-    transform: isOpen ? 'rotate(-45deg) translate(-25%, 6.5px)' : 'none',
+    transform: isOpen ? 'rotate(-45deg) translate(-25%, 5px)' : 'none',
   }
 
   const bar2Style = {
@@ -61,7 +61,7 @@ const CaboHeader = ({ isFixed = true, color = '#353535', opacity = '1' }) => {
   }
 
   const bar3Style = {
-    transform: isOpen ? ' rotate(45deg) translate(-25%, -6.5px)' : 'none',
+    transform: isOpen ? ' rotate(45deg) translate(-25%, -6px)' : 'none',
   }
 
   const toggleMenu = () => {
@@ -84,7 +84,7 @@ const CaboHeader = ({ isFixed = true, color = '#353535', opacity = '1' }) => {
     <>
       <div
         style={{
-          height: 70,
+          height: 60,
           width: '100%',
           position: 'fixed',
           zIndex: 1,
@@ -120,7 +120,7 @@ const CaboHeader = ({ isFixed = true, color = '#353535', opacity = '1' }) => {
               <img
                 src="/img/logo.svg"
                 alt="logo"
-                style={{ height: 40, cursor: 'pointer' }}
+                style={{ height: 35, cursor: 'pointer' }}
                 onClick={() => {
                   saveLog('헤더 로고 클릭')
                   navigate('/mo')
@@ -131,7 +131,7 @@ const CaboHeader = ({ isFixed = true, color = '#353535', opacity = '1' }) => {
               <img
                 src="/img/logo.svg"
                 alt="logo"
-                style={{ height: 40, cursor: 'pointer' }}
+                style={{ height: 35, cursor: 'pointer' }}
                 onClick={() => {
                   saveLog('헤더 로고 클릭')
                   navigate('/mo')

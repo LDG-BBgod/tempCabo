@@ -48,7 +48,7 @@ const CaboHeader = ({ isFixed = false, color = '#353535', opacity = '1' }) => {
     <>
       <div
         style={{
-          height: 90,
+          height: 80,
           width: '100%',
           position: isFixed === true ? 'fixed' : 'absolute',
           zIndex: 1,
@@ -81,7 +81,7 @@ const CaboHeader = ({ isFixed = false, color = '#353535', opacity = '1' }) => {
               <img
                 src="/img/logo.svg"
                 alt="logo"
-                style={{ height: 50, cursor: 'pointer' }}
+                style={{ height: 45, cursor: 'pointer' }}
                 onClick={() => {
                   saveLog('헤더 로고 클릭')
                   navigate('/pc')
@@ -92,7 +92,7 @@ const CaboHeader = ({ isFixed = false, color = '#353535', opacity = '1' }) => {
               <img
                 src="/img/logo_white.svg"
                 alt="logo"
-                style={{ height: 50, cursor: 'pointer' }}
+                style={{ height: 45, cursor: 'pointer' }}
                 onClick={() => {
                   saveLog('헤더 로고 클릭')
                   navigate('/pc')
@@ -116,7 +116,7 @@ const CaboHeader = ({ isFixed = false, color = '#353535', opacity = '1' }) => {
                 color={color}
                 onClick={() => {
                   saveLog('헤더 서비스 이동 클릭')
-                  window.open('https://cabo.kr/serviceHome/', '_blank');
+                  window.open('https://cabo.kr/serviceHome/', '_blank')
                   window.scrollTo(0, 0)
                 }}
               >

@@ -31,9 +31,11 @@ const Company = () => {
   const [selectedList, setSelectedList] = useState('vision')
 
   const List = ({ text, id }) => {
-
+    const [isHovered, setIsHovered] = useState(false)
     return (
       <div
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -47,7 +49,14 @@ const Company = () => {
           navigate(id)
         }}
       >
-        <CaboText fontSize={24} color={selectedList === id ? '#fff' : '#000'}>
+        <CaboText
+          fontSize={24}
+          fontWeight={isHovered ? '700' : '400'}
+          color={selectedList === id ? '#fff' : '#000'}
+          style={{
+            transition: '0.2s',
+          }}
+        >
           {text}
         </CaboText>
       </div>
@@ -93,7 +102,7 @@ const Company = () => {
               height: '100%',
             }}
           >
-            <CaboText fontSize={48} fontWeight="600" color="#fff">
+            <CaboText fontSize={40} fontWeight="600" color="#fff">
               (주)카보 소개
             </CaboText>
           </div>
