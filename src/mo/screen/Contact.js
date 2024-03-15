@@ -53,7 +53,7 @@ const Contact = () => {
               </CaboText>
               <CaboSpacer space={30} />
               <CaboText fontSize={20} fontWeight="600" color="#16223B">
-                업무 협약, 중개계약,
+                업무 협약, 중개 계약,
               </CaboText>
               <CaboSpacer space={15} />
               <CaboText fontSize={20} fontWeight="600" color="#16223B">
@@ -61,7 +61,7 @@ const Contact = () => {
               </CaboText>
               <CaboSpacer space={15} />
               <CaboText fontSize={20} fontWeight="600" color="#16223B">
-                확인후 답변드립니다.
+                확인 후 답변드립니다.
               </CaboText>
             </div>
             <CaboSpacer space={50} />
