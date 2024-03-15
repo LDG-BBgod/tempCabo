@@ -6,14 +6,11 @@ const CaboText = ({
   fontWeight = 'regular',
   style = {},
 }) => {
-  const fontFamily = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/.test(children)
-    ? 'Noto Sans Kr'
-    : 'Inter'
   return (
     <div
       onClick={onClick}
       style={{
-        fontFamily: fontFamily,
+        fontFamily: 'Noto Sans Kr',
         fontSize,
         fontWeight,
         color,
